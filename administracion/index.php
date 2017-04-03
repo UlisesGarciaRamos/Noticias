@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -23,6 +24,11 @@
 
 		<!-- hoja de estilo 'ace' para forma -->
 		<link rel="stylesheet" href="css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'> <!-- borrar abajo-->
+		<link rel="stylesheet" href="css2/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css2/stylex.css"> <!-- Gem style -->
+	<script src="js2/modernizr.js"></script> <!-- Modernizr borrar arriba -->
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="css/ace-part2.min.css" class="ace-main-stylesheet" />
@@ -52,6 +58,107 @@
         $usuario = $_POST['v_user'];
         $contrasenia = $_POST['v_password'];
     ?>
+
+	
+	<!-- BORRAR ABAJO-->
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Sign in</a></li>
+				<li><a href="#0">Registrar Nuevo Admin</a></li>
+			</ul>
+
+<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Login">
+					</p>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+	<form action="../php/basesdedatos.php"  method="post" class="cd-form"> 
+			
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Usuario</label>
+						<input class="full-width has-padding has-border" id="signup-username"  name = "signup-username" type="text" placeholder="Username">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">Email</label>
+						<input class="full-width has-padding has-border" id="signup-email" name="signup-email"  type="text" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" name="signup-password" type="password"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">Acepto <a href="#0">Terms</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input type="submit" value="Registrar">
+						<!--						<input class="full-width has-padding" type="submit" value="Registrar"> -->
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js2/main.js"></script> <!-- Gem jQuery -->
+
+
+<!--BORRAR ARRIBA --> 
 
 	<!-- -Inicia contenedor o div azul superior -->
 		<div id="navbar" class="navbar navbar-default ace-save-state">
@@ -431,7 +538,7 @@
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
-								Elemento 1
+								Administracion de usuarios
 							</span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -444,7 +551,7 @@
 								<a href="#" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i>
 
-									Contenido 1
+									Administradores
 									<b class="arrow fa fa-angle-down"></b>
 								</a>
 
@@ -452,9 +559,51 @@
 
 								<ul class="submenu">
 									<li class="">
+										<!-- <a href="#"> 
+										<i class="menu-icon fa fa-caret-right"></i>-->
+											
+										<header role="banner">
+		
+		<nav class="main-nav">
+			<ul>
+				<!-- inser more links here -->
+				
+				<li><a class="cd-signup" href="#0">Registrar</a></li
+				
+			></ul>
+		</nav>
+	</header>
+	<header role="banner">
+		
+		<nav class="main-nav">
+			<ul>
+				<!-- inser more links here -->
+				
+				<li><a class="cd-signin" href="#0">Modificar</a></li>
+			</ul>
+		</nav>
+	</header>
+		
+										
+							
+							
+							
+						<li class="">
+								<a href="#" class="dropdown-toggle">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Clientes
+									<b class="arrow fa fa-angle-down"></b>
+								</a>
+
+								<b class="arrow"></b>
+
+								<b class="arrow"></b>
+
+								<ul class="submenu">
+									<li class="">
 										<a href="#">
 											<i class="menu-icon fa fa-caret-right"></i>
-											Sub contenido 1
+											Registro de Cliente
 										</a>
 
 										<b class="arrow"></b>
@@ -463,7 +612,7 @@
 									<li class="">
 										<a href="#">
 											<i class="menu-icon fa fa-caret-right"></i>
-											Sub contenido 2
+											Modificar Cliente
 										</a>
 
 										<b class="arrow"></b>
@@ -472,7 +621,7 @@
 									<li class="">
 										<a href="#">
 											<i class="menu-icon fa fa-caret-right"></i>
-											Sub contenido 3
+											Eliminar Cliente
 										</a>
 
 										<b class="arrow"></b>
@@ -481,6 +630,12 @@
 								
 								</ul>
 							</li>
+							
+							
+							
+							
+							
+							
 
 							<li class="">
 								<a href="#">
