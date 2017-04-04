@@ -49,7 +49,8 @@
 
 <body class="no-skin">
     <?php
-       
+        $usuario = $_POST['v_user'];
+        $contrasenia = $_POST['v_password'];
     ?>
 
 	<!-- -Inicia contenedor o div azul superior -->
@@ -354,7 +355,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="perfil.php">
+									<a href="#">
 										<i class="ace-icon fa fa-user"></i>
 										Perfil
 									</a>

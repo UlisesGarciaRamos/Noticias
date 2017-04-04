@@ -1,5 +1,7 @@
 <?php
 include("../php/conexion.php");
+echo "<script type="text/javascript">alert("hola amor");</script> ";
+
 if (isset($_POST['signup-username']) and !empty($_POST['signup-email']) and
 isset($_POST['signup-password']) and !empty($_POST['signup-password'])) {
 
@@ -11,4 +13,5 @@ echo "datos insertados";
 }else {
   echo "Problemas al insertar datos";
 }
+
  ?>

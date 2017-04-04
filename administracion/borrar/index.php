@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -23,6 +24,9 @@
 
 		<!-- hoja de estilo 'ace' para forma -->
 		<link rel="stylesheet" href="css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'> 
+		
 
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="css/ace-part2.min.css" class="ace-main-stylesheet" />
@@ -46,12 +50,19 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 	</head>
+<!-- borrar abajo -->
 
+
+ <!-- BORRAR ARRIBA-->
 <body class="no-skin">
     <?php
-       
+        $usuario = $_POST['v_user'];
+        $contrasenia = $_POST['v_password'];
     ?>
 
+	
+	
+	
 	<!-- -Inicia contenedor o div azul superior -->
 		<div id="navbar" class="navbar navbar-default ace-save-state">
 			<div class="navbar-container ace-save-state" id="navbar-container">
@@ -354,7 +365,7 @@
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 
 								<li>
-									<a href="perfil.php">
+									<a href="#">
 										<i class="ace-icon fa fa-user"></i>
 										Perfil
 									</a>
@@ -443,7 +454,7 @@
 								<a href="#" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i>
 
-									Administrador
+									Administradores
 									<b class="arrow fa fa-angle-down"></b>
 								</a>
 
@@ -451,40 +462,19 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="../php/Aadministrador.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Registro
-										</a>
+										 <a href="#"> 
+										<i class="menu-icon fa fa-caret-right">Registrar</i>
+											
+										
+		
+		
 
-										<b class="arrow"></b>
-									</li>
-
-									<li class="">
-										<a href="../php/a_cliente.php">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Modificar
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="">
-										<a href="../php/DelAdmin.php">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Eliminar
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-								
-								</ul>
-							</li>
-
-
-
-
-							<li class="">
+		
+										
+							
+							
+							
+						<li class="">
 								<a href="#" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Clientes
@@ -497,7 +487,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="../php/Aacliente.html">
+										<a href="#">
 											<i class="menu-icon fa fa-caret-right"></i>
 											Registro de Cliente
 										</a>
@@ -506,7 +496,7 @@
 									</li>
 
 									<li class="">
-										<a href="../php/a_clienteCliente.php">
+										<a href="#">
 											<i class="menu-icon fa fa-caret-right"></i>
 											Modificar Cliente
 										</a>
@@ -515,7 +505,7 @@
 									</li>
 
 									<li class="">
-										<a href="../php/DelCliente.php">
+										<a href="#">
 											<i class="menu-icon fa fa-caret-right"></i>
 											Eliminar Cliente
 										</a>
@@ -526,13 +516,12 @@
 								
 								</ul>
 							</li>
-
-
-
-
-
-
-
+							
+							
+							
+							
+							
+							
 
 							<li class="">
 								<a href="#">
