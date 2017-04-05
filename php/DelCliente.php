@@ -78,6 +78,9 @@ echo ('
 <input type="submit"  value="Eliminar Registro" maxlength="50"></div>');
 
 
+echo ('
+<div><a href="../administracion/index.php">Volver</a></div></div>');
+
 echo		"</form>";
 		
 		

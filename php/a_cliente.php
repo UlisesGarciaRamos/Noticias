@@ -13,7 +13,7 @@
 	<br />	<br />
 	<center>
 	 <label for="v_dni"><strong>&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INGRESA ID:</strong></label>
-        	<input type="text" name="v_dni" id="v_dni" maxlength="5" size="5">
+        	<input type="text" name="v_dni" id="v_dni">
 				
 			<input type="reset" name="v_btnLimpiar" id="v_btnLimpiar" value="Limpiar"></td>
         	<input name="v_btnBuscar" type="submit" id="v_btnBuscar" onClick="MM_validateForm('v_dni','','R');return document.MM_returnValue" value="Buscar">
@@ -40,13 +40,15 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
-$consulta = "select * from administrador where idAdmin=$r_buscar";
-
+//$consulta = "SELECT * FROM `usuario` WHERE `usuario` LIKE '%{$r_buscar}%'";
+$consulta = "SELECT * FROM `usuario` WHERE `usuario` LIKE '%{$r_buscar}%'";
+echo $consulta;
 if ($resultado = mysqli_query($enlace, $consulta)) {
 
     /* obtener el array asociativo */
     while ($fila = mysqli_fetch_row($resultado)) {
         //printf ("%s (%s) (%s) (%s) (%s) (%s) \n", $fila[0], $fila[1], $fila[2], $fila[3], $fila[4], $fila[5]);
+		echo $fila;
 		echo "<form class='contacto'action='actualizacionAdmin.php' method='post'>";
 		echo ('<tr>
 <div><label>Id:</label> 
@@ -73,8 +75,11 @@ echo ('<div><label>Email:</label>
 echo ('<div><label>Password:</label>
 <input type="password" name="password" value="'.$fila[5].'" maxlength="50"></div>');
 
-echo ('
+echo ('<div>
 <input type="submit"  value="Actualizar" maxlength="50"></div>');
+
+echo ('
+<div><a href="../administracion/index.php">Volver</a></div></div>');
 
 
 echo		"</form>";

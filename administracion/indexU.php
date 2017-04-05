@@ -451,7 +451,7 @@
 								<a href="#" class="dropdown-toggle">
 									<i class="menu-icon fa fa-caret-right"></i>
 
-									Administrador
+									Administracion
 									<b class="arrow fa fa-angle-down"></b>
 								</a>
 
@@ -461,7 +461,7 @@
 									<li class="">
 										<a href="../php/Aadministrador.html">
 											<i class="menu-icon fa fa-caret-right"></i>
-											Registro
+											Escribir Noticia
 										</a>
 
 										<b class="arrow"></b>
@@ -470,7 +470,7 @@
 									<li class="">
 										<a href="../php/a_cliente.php">
 											<i class="menu-icon fa fa-caret-right"></i>
-											Modificar
+											...
 										</a>
 
 										<b class="arrow"></b>
@@ -479,7 +479,7 @@
 									<li class="">
 										<a href="../php/DelAdmin.php">
 											<i class="menu-icon fa fa-caret-right"></i>
-											Eliminar
+											...
 										</a>
 
 										<b class="arrow"></b>
@@ -488,56 +488,6 @@
 								
 								</ul>
 							</li>
-
-
-
-
-							<li class="">
-								<a href="#" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Clientes
-									<b class="arrow fa fa-angle-down"></b>
-								</a>
-
-								<b class="arrow"></b>
-
-								<b class="arrow"></b>
-
-								<ul class="submenu">
-									<li class="">
-										<a href="../php/Aacliente.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Registro de Cliente
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="">
-										<a href="../php/a_clienteCliente.php">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Modificar Cliente
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="">
-										<a href="../php/DelCliente.php">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Eliminar Cliente
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-								
-								</ul>
-							</li>
-
-
-
-
 
 
 
