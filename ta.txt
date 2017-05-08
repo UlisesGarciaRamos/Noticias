@@ -1,0 +1,17 @@
+hacer
+TABLE NOTICIA
+
+id
+categoria
+titulo
+subtitulo
+imagen
+fecha
+nombre periodista
+cita textual
+redaccion
+
+
+tabla ultimos momentos
+id
+titulo
